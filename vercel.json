@@ -1,8 +1,11 @@
 {
     "functions": {
         "api/callback.js": {
-            "memory": 128,
             "maxDuration": 10
         }
-    }
+    },
+    "rewrites": [
+        { "source": "/api/callback", "destination": "/api/callback" },
+        { "source": "/api/gettoken", "destination": "/api/callback" }
+    ]
 }
